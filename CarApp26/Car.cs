@@ -13,6 +13,9 @@ namespace CarApp26
         private string _regNo;
         private bool _trackReady;
         private Owner _owner;
+        private int _odometer;
+
+        private static readonly Random _rand = new Random();
 
         public Car( string brand, string model, int year, string regNo, bool trackReady, Owner owner )
         {
@@ -22,6 +25,7 @@ namespace CarApp26
             _regNo = regNo;
             _trackReady = trackReady;
             _owner = owner;
+            _odometer = 0;
         }
 
 
@@ -34,6 +38,7 @@ namespace CarApp26
             _trackReady = false;
 
             _owner = new Owner();
+            _odometer = 0;
         }
 
 
@@ -71,9 +76,18 @@ namespace CarApp26
         {
             get { return _owner; }
         }
+
+        public int Odometer
+        {
+            get { return _odometer; }
+        }
         public void Drive()
         {
-            Console.WriteLine($"Brand {_brand} regno {_regNo}  kører");
+            int km = _rand.Next(1, 101);
+            _odometer = _odometer + km; //_odometer += km; 
+            Console.WriteLine("km " + km);
+            Console.WriteLine("Odometer " + _odometer );
+            Console.WriteLine($"Brand {_brand} regno {_regNo}  kilometertæller { _odometer }");
         }
 
 

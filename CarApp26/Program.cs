@@ -41,3 +41,6 @@ myCar3.PrintAllINformation();
 Renter renter1 = new Renter("Peter", "Vej 123", "12312144455");
 Console.WriteLine("Lejer " + renter1.ToString());
 
+
+myCar1.Drive();
+myCar1.Drive();
