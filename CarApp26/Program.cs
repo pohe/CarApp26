@@ -38,3 +38,6 @@ myCar3.Year = 2005;
 myCar3.ChangeOwner(owner1);
 myCar3.PrintAllINformation();
 
+Renter renter1 = new Renter("Peter", "Vej 123", "12312144455");
+Console.WriteLine("Lejer " + renter1.ToString());
+
