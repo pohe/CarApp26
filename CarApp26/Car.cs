@@ -98,7 +98,8 @@ namespace CarApp26
 
         public void PrintAllINformation()
         {
-            Console.WriteLine($"Brand {_brand} model {_model} year {_year} regNo {_regNo} trackReady {_trackReady} owner {_owner.Name} cpr på owner {_owner.Cpr} ");
+            Console.WriteLine($"Brand {_brand} model {_model} year {_year} regNo {_regNo} trackReady {_trackReady} owner /*{_owner.Name} cpr på owner {_owner.Cpr}*/ ");
+            _owner.PrintOwnerInfo();
             //_owner.PrintOwnerInfo();
         }
 

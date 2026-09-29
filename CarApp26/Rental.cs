@@ -19,7 +19,7 @@ namespace CarApp26
         public Rental(Car car, Renter renter)
         {
             Car = car;
-            Renter = Renter;
+            Renter = renter;
             StartOdometer = Car.Odometer;
             StartDate = DateTime.Now; //Sætter dato tid lige nu
         }
@@ -43,17 +43,19 @@ namespace CarApp26
         {
             Console.WriteLine("---- Receipt for rental");
             //Udskriv bilens model og registreringsnummer
-
+            Console.WriteLine($"Model {Car.Model} {Car.RegNo} " );
             //Udskriv navn på ejer
 
-
+            Console.WriteLine($"Ejer {Car.TheOwner.Name} ");
             //Udskriv navn på lejer 
-
+            Console.WriteLine($"Lejer { Renter.Name }");
             //Udskriv startdato og slutdato
-
+            Console.WriteLine($"Startdato {StartDate.ToShortDateString() }slutdato {EndDate}");
             //Antal km kørt
-
+            Console.WriteLine($"Antal km {EndOdometer -StartOdometer }");
             //Udskriv prisen
+            Console.WriteLine($"Prisen er {CalculatePrice() }");
+
 
         }
 
