@@ -41,13 +41,11 @@ myCar3.PrintAllINformation();
 Renter renter1 = new Renter("Peter", "Vej 123", "12312144455");
 Console.WriteLine("Lejer " + renter1.ToString());
 Rental myRental1 = new Rental(myCar1, renter1);
-
 myCar1.Drive();
 myCar1.Drive();
-
 myRental1.EndRental();
 
-Console.WriteLine("Udskriv kvittering for udlejning");
+//Console.WriteLine("Udskriv kvittering for udlejning");
 
 myRental1.PrintReceipt();
 
